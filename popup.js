@@ -26,5 +26,13 @@
 	// 	numbersElement.innerHTML = raffledLis;
 	// 	raffledElement.className += ' active';
 	// };
-	alert($('body'));
+	$('html').height(219);
+	$('body').height(219);
+
+	var pickGame = function(){
+		alert('aeaeae');
+	}
+
+	$('.games li').on('hover', pickGame());
+
 })();
