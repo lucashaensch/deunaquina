@@ -1,41 +1,74 @@
 body {
-	font-family: Verdana;
-	background: rgb(120,206,0);
-	background: -moz-linear-gradient(left,  rgba(120,206,0,1) 0%, rgba(149,214,0,1) 100%);
-	background: -webkit-linear-gradient(left,  rgba(120,206,0,1) 0%,rgba(149,214,0,1) 100%);
-	background: linear-gradient(to right,  rgba(120,206,0,1) 0%,rgba(149,214,0,1) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#78ce00', endColorstr='#95d600',GradientType=1 );
-	text-align: center;
-	line-height: 30px;
-	color: #FFF;
+	font-family: 'futura', helvetica, sans-serif;
+	margin: 0;
 }
 
-html, body {
-	padding: 0;
-	margin: 0;
-	width: 160px;
-	height: 30px;
+a {
+	text-decoration: none;
+	color: #444;
+}
+
+h1 {
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
+    background: rgba(0, 0, 0, .05);
+    text-align: center;
+    padding: 11px;
+    width: 230px;
+    margin: 0;
 }
 
 ul {
+    list-style: none;
 	padding: 0;
-	margin: 10px 0;
-	list-style: none;
+    margin: 0;
 }
 
 li {
-	width: 80%;
-	color: #FFF;
-	margin: 0 auto;
-	cursor: pointer;
-	margin-top: 10px;
-	font-weight: bold;
-	border-radius: 4px;
-	transition: all .2s ease;
-	-webkit-transition: all .2s ease;
-	background: rgba(255, 255, 255, .3);
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    -webkit-transition: all .25s ease;
+    transition: all .25s ease;
+    position: relative;
+    padding-left: 30px;
+    line-height: 32px;
+    font-size: 16px;
 }
 
 li:hover {
-	background: rgba(255, 255, 255, .5);
+	background: rgba(0, 0, 0, .04);
+}
+
+a:last-child li {
+	border-bottom-width: 0;
+}
+
+/** adding ridiculous background-position imaging */
+li:before {
+    background-image: url(icos_loterias.png);
+    background-size: 20px;
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    content: '';
+    left: 3px;
+    top: 6px;
+}
+
+a:nth-child(1) li:before {
+	background-position: 0 0;
+}
+
+a:nth-child(2) li:before {
+	background-position: 0 204px;
+}
+
+a:nth-child(3) li:before {
+	background-position: 0 178px;
+}
+
+a:nth-child(4) li:before {
+	background-position: 0 151px;
+}
+
+a:nth-child(5) li:before {
+	background-position: 0 100px;
 }
